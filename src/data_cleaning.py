@@ -38,3 +38,12 @@ def handle_missing_values(df):
         df["qty"] = df["qty"].fillna(0)
 
     return df
+def remove_invalid_rows(df):
+
+    if "price" in df.columns:
+        df = df[df["price"] >= 0]
+
+    if "qty" in df.columns:
+        df = df[df["qty"] >= 0]
+
+    return df
