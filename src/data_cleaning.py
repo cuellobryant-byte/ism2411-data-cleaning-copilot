@@ -21,3 +21,20 @@ def clean_column_names(df):
     )
 
     return df
+def handle_missing_values(df):
+
+    if "prodname" in df.columns:
+        df["prodname"] = df["prodname"].astype(str).str.strip()
+
+    if "category" in df.columns:
+        df["category"] = df["category"].astype(str).str.strip()
+
+    if "price" in df.columns:
+        df["price"] = pd.to_numeric(df["price"], errors="coerce")
+        df["price"] = df["price"].fillna(df["price"].mean())
+
+    if "qty" in df.columns:
+        df["qty"] = pd.to_numeric(df["qty"], errors="coerce")
+        df["qty"] = df["qty"].fillna(0)
+
+    return df
