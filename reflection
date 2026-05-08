@@ -1,0 +1,17 @@
+# Reflection
+
+## What Copilot generated
+
+GitHub Copilot helped me get started with most of the functions in this project. I mainly used it for the structure of the `load_data()` function and parts of the data filtering logic. I would write a comment explaining what I wanted the function to do, and Copilot would suggest code based on that.
+
+## What I modified
+
+Even though Copilot was helpful, I still had to change a good amount of the code. Some of the column names it assumed didn’t match my dataset, so I had to adjust things like `prodname`, `category`, `price`, and `qty`. I also fixed how missing values were handled because the original suggestions didn’t fully match what my data needed.
+
+## What I learned
+
+this assignment showed me how copilot can help someone code to help fix messy code and showed me that data normally needs alot of cleaning before being able to use it. I had to deal with things like missing values, inconsistent formatting, and incorrect data types. Using pandas made this process more manageable once I understood the steps.
+
+I also learned that Copilot is useful, but it’s not something you can fully rely on. It helps speed things up and gives ideas, but you still need to understand what’s going on and fix things when they don’t match your data. In the end, I think it works best as a tool to support coding, not replace thinking through the problem.
+
+Overall, I feel more confident working with data cleaning in Python and using AI tools in a responsible way.
