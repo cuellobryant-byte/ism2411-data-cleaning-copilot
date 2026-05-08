@@ -47,3 +47,19 @@ def remove_invalid_rows(df):
         df = df[df["qty"] >= 0]
 
     return df
+if __name__ == "__main__":
+
+    raw_path = "data/raw/sales_data_raw.csv"
+    cleaned_path = "data/processed/sales_data_clean.csv"
+
+    df_raw = load_data(raw_path)
+
+    if df_raw is not None:
+
+        df_clean = clean_column_names(df_raw)
+        df_clean = handle_missing_values(df_clean)
+        df_clean = remove_invalid_rows(df_clean)
+
+        df_clean.to_csv(cleaned_path, index=False)
+
+        print(df_clean.head())
